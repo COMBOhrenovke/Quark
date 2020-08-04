@@ -34,11 +34,4 @@ public class SpringySlimeBlock extends SlimeBlock {
     public void onEntityCollision(BlockState state, World world, BlockPos pos, Entity entity) {
         SpringySlimeModule.collideWithSlimeBlock(pos, entity);
     }
-
-    @Override
-    public void onLanded(@Nonnull IBlockReader world, Entity entity) {
-    	if(ModuleLoader.INSTANCE.isModuleEnabled(SpringySlimeModule.class)) {
-    		entity.setMotion(entity.getMotion().mul(1, 0, 1));
-    	} else super.onLanded(world, entity);
-    }
 }

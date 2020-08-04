@@ -34,6 +34,7 @@ import net.minecraftforge.common.util.FakePlayer;
 import vazkii.quark.automation.block.FeedingTroughBlock;
 import vazkii.quark.automation.module.FeedingTroughModule;
 import vazkii.quark.base.handler.MiscUtil;
+import vazkii.quark.base.util.MovableFakePlayer;
 
 /**
  * @author WireSegal
@@ -61,7 +62,7 @@ public class FeedingTroughTileEntity extends LockableLootTileEntity implements I
 
     public FakePlayer getFoodHolder(TemptGoal goal) {
         if (foodHolder == null && world instanceof ServerWorld)
-            foodHolder = new FakePlayer((ServerWorld) world, DUMMY_PROFILE);
+            foodHolder = new MovableFakePlayer((ServerWorld) world, DUMMY_PROFILE);
 
         AnimalEntity entity = (AnimalEntity) goal.creature;
 

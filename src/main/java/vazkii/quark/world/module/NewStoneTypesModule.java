@@ -33,7 +33,7 @@ public class NewStoneTypesModule extends Module {
 	@Config(flag = "limestone") public static boolean enableLimestone = true;
 	@Config(flag = "jasper") public static boolean enableJasper = true;
 	@Config(flag = "slate") public static boolean enableSlate = true;
-	@Config(flag = "voidstone") public static boolean enableVoidstone = true;
+	@Config(flag = "basalt") public static boolean enableVoidstone = true;
 	
 	@Config public static StoneTypeConfig marble = new StoneTypeConfig(false);
 	@Config public static StoneTypeConfig limestone = new StoneTypeConfig(false);
